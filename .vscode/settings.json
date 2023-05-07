@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./image_manipulation",
+        "./translate"
+    ]
+}

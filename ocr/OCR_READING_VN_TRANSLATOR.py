@@ -4,12 +4,12 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
 import numpy as np
-import refining_image
+import image_manipulation.refining_image as img_
 
 import cv2
-import deepl_func
+import deepl_func as DLF
 
-translator = deepl_func.__init__()
+translator = DLF.__init__()
 filename = "imgs\\rei_jap.png"
 
 img2 = cv2.imread(filename)[470: 680, 0:735]
@@ -20,12 +20,12 @@ def ocr_core(img):
 
 
 
-img2 = refining_image.get_greyscale(img2)
+img2 = img_.get_greyscale(img2)
 #img2 = adap_gausse(img2)
 #img2 = erosion(img2)
 #img2 = gaussian_blur(img2)
 #img2 = thresholding(img2)
-img2 = refining_image.reduce_noise_2(img2)
+img2 = img_.reduce_noise_2(img2)
 
 
 cv2.imshow("ratio", img2)
