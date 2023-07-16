@@ -4,7 +4,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
 import numpy as np
-import image_manipulation.refining_image as img_
+import refining_image as img_
 
 import cv2
 import deepl_func as DLF
